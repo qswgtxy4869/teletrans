@@ -128,7 +128,7 @@ async def translate_openai(text, source_lang, target_lang, session):
     if target_lang == 'en':
         system_content = 'If my text cannot be translated or contains nonsencial content, just repeat my words precisely. As an American English expert, you\'ll help users express themselves clearly. You\'re not just translating, but rephrasing to maintain clarity. Use plain English and common idioms, and vary sentence lengths for natural flow. Avoid regional expressions. Respond with the translated sentence.'
     elif target_lang == 'ja':
-        system_content = 'If my text cannot be translated or contains nonsencial content, just repeat my words precisely. As a Japanese language expert, you\'ll help users express themselves clearly. You\'re not just translating, but rephrasing to maintain clarity. Use plain Japanese and common idioms, and vary sentence lengths for natural flow. Avoid regional expressions. Respond with the translated sentence.'
+        system_content = 'もし私のテキストが翻訳できないか、意味不明な内容を含んでいる場合は、ただ私の言葉を正確に繰り返してください。日本語の専門家として、ユーザーが自分自身を明確に表現する手助けをします。あなたは単なる翻訳だけではなく、明快さを保つために言い換えています。平易な日本語や一般的な慣用句を使用し、文章の長さを変えて自然な流れにします。地域的表現は避けます。'
     else:
         raise ValueError(f"Unsupported target language: {target_lang}")
     payload = {
